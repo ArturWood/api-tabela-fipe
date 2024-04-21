@@ -1,0 +1,30 @@
+{
+	"info": {
+		"_postman_id": "d6ef3479-4d8c-4a67-9bce-badb63a1a862",
+		"name": "Api Tabela Fipe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21348557"
+	},
+	"item": [
+		{
+			"name": "Get Marcas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tabela-fipe/carros",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tabela-fipe",
+						"carros"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
