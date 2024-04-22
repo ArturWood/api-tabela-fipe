@@ -1,6 +1,7 @@
 package br.com.dev.api.fipe.controller;
 
 import br.com.dev.api.fipe.domain.ResultDto;
+import br.com.dev.api.fipe.domain.ValoresResultDto;
 import br.com.dev.api.fipe.service.FipeService;
 import jakarta.validation.constraints.Pattern;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,5 +30,13 @@ public class FipeController {
                                                       @PathVariable @Pattern(regexp = "\\d{1,3}") String marcaId) {
         List<ResultDto> modelos = fipeService.getModelos(tipo, marcaId);
         return ResponseEntity.ok(modelos);
+    }
+
+    @GetMapping("/{tipo}/{marcaId}/{modeloId}")
+    public ResponseEntity<List<ValoresResultDto>> getValores(@PathVariable @Pattern(regexp = "(?i)CARROS|MOTOS|CAMINHOES") String tipo,
+                                                             @PathVariable @Pattern(regexp = "\\d{1,3}") String marcaId,
+                                                             @PathVariable @Pattern(regexp = "\\d{4,5}") String modeloId) {
+        List<ValoresResultDto> valores = fipeService.getValores(tipo, marcaId, modeloId);
+        return ResponseEntity.ok(valores);
     }
 }
