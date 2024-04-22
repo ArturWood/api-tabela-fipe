@@ -15,6 +15,6 @@ public class ExceptionEntityHandler {
 
     @ExceptionHandler(HandlerMethodValidationException.class)
     public ResponseEntity<ErrorResponseDto> handlerMethodValidation() {
-        return ResponseEntity.badRequest().body(new ErrorResponseDto("Formato inválido, obrigatorio enviar carros|motos|caminhoes"));
+        return ResponseEntity.badRequest().body(new ErrorResponseDto("Formato inválido na URL"));
     }
 }

@@ -23,4 +23,11 @@ public class FipeController {
         List<ResultDto> marcas = fipeService.getMarcas(tipo);
         return ResponseEntity.ok(marcas);
     }
+
+    @GetMapping("/{tipo}/{marcaId}")
+    public ResponseEntity<List<ResultDto>> getModelos(@PathVariable @Pattern(regexp = "(?i)CARROS|MOTOS|CAMINHOES") String tipo,
+                                                      @PathVariable @Pattern(regexp = "\\d{1,3}") String marcaId) {
+        List<ResultDto> modelos = fipeService.getModelos(tipo, marcaId);
+        return ResponseEntity.ok(modelos);
+    }
 }
