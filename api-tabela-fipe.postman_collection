@@ -46,6 +46,28 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Get Valores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tabela-fipe/carros/59/5940",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tabela-fipe",
+						"carros",
+						"59",
+						"5940"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
