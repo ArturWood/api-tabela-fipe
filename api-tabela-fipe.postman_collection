@@ -25,6 +25,27 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Get Modelos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tabela-fipe/carros/59",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tabela-fipe",
+						"carros",
+						"59"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
